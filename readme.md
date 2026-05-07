@@ -1,6 +1,6 @@
 # start of react js learning from Udemy
 
-- Date: 06/05/2026
+## Date: 06/05/2026
 
 ### lecture 186 - react course
 
@@ -32,3 +32,19 @@
 6. **Rendering Process:** The lecture covers how updates are managed through the virtual DOM, with demonstrations of component creation and rendering in both setups.
 
 - Overall, the lecture offers a comprehensive overview of React's structure, differences between CRA and Vite, and foundational principles of React applications.
+
+## date: 07/05/2026
+
+### Lecture 189 - Create your own react library and JSX
+
+- In this lecture, Hitesh sir introduces the idea of creating a **custom React library** and explains **JSX**, highlighting that React simplifies DOM manipulation through JavaScript. He outlines the basic structure of a React application, which consists of an HTML file and a JavaScript file.
+
+- Key points covered include:
+
+1. **Creating a Basic React-like Element:** Hitesh sir explains how to define the type of an element, its properties (props), and children.
+2. **Custom Render Function:** He demonstrates how to create a function that takes a React element and injects it into the DOM.
+3. **Understanding React Elements:** The lecture emphasizes that React treats elements as objects, which enables dynamic rendering.
+4. **Setting Attributes:** Hitesh discusses how to set multiple attributes efficiently in JavaScript using loops.
+5. **Common Pitfalls:** He addresses issues like mistakenly including children as props and offers solutions.
+
+- This lecture provide the great understanding of how the **JSX** works and how react creates the elements
