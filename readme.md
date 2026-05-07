@@ -48,3 +48,23 @@
 5. **Common Pitfalls:** He addresses issues like mistakenly including children as props and offers solutions.
 
 - This lecture provide the great understanding of how the **JSX** works and how react creates the elements
+
+### Lecture 190 - Why you need hooks and project
+
+- In this lecture, Hitesh covers the fundamental concept of state in React, which is essential for building interactive applications. Here are the main points:
+
+1. **Introduction to State:** Hitesh emphasizes the importance of understanding state in React and its role in state management for interactive applications.
+
+2. **Hands-on Practice:** He encourages viewers to create a simple counter project using React, guiding them through the setup process in VS Code and using Vite to create a React app.
+
+3. **Creating User Interfaces:** Hitesh shows how to create a basic UI with buttons to add and remove values from the counter, introducing variable injection in JSX.
+
+4. **State Concept:** He explains that updating a variable doesn't automatically update the UI, which leads to the introduction of the state concept, and how React manages state for automatic UI re-rendering.
+
+5. **useState Hook:** Hitesh introduces the useState hook, detailing its syntax and its role in returning a state variable and a function to update that state. He stresses the importance of using the update function rather than modifying the state directly.
+
+- Throughout the lecture, he provides examples demonstrating the add and remove functionality for the counter and discusses batching state updates in React.
+
+**Conclusion:** Hitesh reinforces the importance of mastering state in React and encourages continuous practice, promising more projects and concepts in future videos.
+
+- This lecture lays a strong foundation for understanding how to make dynamic and responsive applications in React
