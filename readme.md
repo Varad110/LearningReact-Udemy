@@ -68,3 +68,19 @@
 **Conclusion:** Hitesh reinforces the importance of mastering state in React and encourages continuous practice, promising more projects and concepts in future videos.
 
 - This lecture lays a strong foundation for understanding how to make dynamic and responsive applications in React
+
+### Lecture 191 - 191. Virtual DOM, Fibre and reconciliation
+
+- In this lecture, Hitesh sir focuses on the theoretical aspects of React, highlighting several key concepts critical for building efficient applications:
+
+1. **Virtual DOM:** The lecture begins by comparing traditional DOM manipulation in JavaScript to React's approach. With traditional methods, any change requires a complete re-render of the page, which is inefficient. React utilizes a Virtual DOM, a lightweight version of the real DOM, to optimize performance by only updating necessary parts during changes.
+
+2. **Exploring the React GitHub Repository:** Hitesh sir encourages viewers to explore the React source code on GitHub to gain deeper insights into its functionality, focusing on key components like React DOM and React Core, as well as hooks such as useState and useEffect.
+
+3. **Fiber Architecture:** He introduces the Fiber architecture, which improves React's rendering capabilities. Fiber allows for incremental rendering, meaning React can manage rendering tasks in small chunks and prioritize updates, making animations smoother and enhancing user experience.
+
+4. **Reconciliation:** The concept of reconciliation is explained as the process React uses to identify differences between the Virtual DOM and the real DOM. This efficient update mechanism ensures that only the necessary components are re-rendered when the state changes.
+
+5. **Conclusion:** Hitesh sir wraps up the lecture by stressing the importance of understanding these foundational concepts, as they are crucial for tackling more advanced topics in React and related frameworks like Next.js. He encourages viewers to engage with the material and prepare for coding sessions ahead.
+
+- This lecture serves as a solid foundation for students aiming to understand the engineering side of React.
