@@ -69,7 +69,7 @@
 
 - This lecture lays a strong foundation for understanding how to make dynamic and responsive applications in React
 
-### Lecture 191 - 191. Virtual DOM, Fibre and reconciliation
+### Lecture 191 - Virtual DOM, Fibre and reconciliation
 
 - In this lecture, Hitesh sir focuses on the theoretical aspects of React, highlighting several key concepts critical for building efficient applications:
 
@@ -84,3 +84,25 @@
 5. **Conclusion:** Hitesh sir wraps up the lecture by stressing the importance of understanding these foundational concepts, as they are crucial for tackling more advanced topics in React and related frameworks like Next.js. He encourages viewers to engage with the material and prepare for coding sessions ahead.
 
 - This lecture serves as a solid foundation for students aiming to understand the engineering side of React.
+
+### Lecture 192 - Tailwind and Props in reactjs
+
+- In this lecture titled "Tailwind and Props in ReactJS," Hitesh sir discusses important concepts regarding React, focusing on the use of props and how to integrate Tailwind CSS into a React application. Here are the main points:
+
+1. **Recap of Previous Topics:** Hitesh sir starts by summarizing key concepts such as state management and virtual DOM reconciliation, underscoring the importance of understanding props.
+
+2. **Configuring Tailwind CSS:** He demonstrates how to set up Tailwind CSS within a React app using Vite, highlighting its efficiency in generating styles. The setup involves modifying the tailwind.config.js and index.css files.
+
+3. **Components in React:** Hitesh sir explains the concept of components, drawing parallels to their use in other programming languages like PHP. He illustrates creating a card component to emphasize the benefits of modularity in code.
+
+4. **Introduction to Props:** Props, short for properties, are introduced as essential for making React components reusable and dynamic. Hitesh sir shows how to pass props to customize the card component with different content, such as usernames and post titles.
+
+5. **Destructuring Props:** He emphasizes the importance of destructuring props for cleaner code and discusses the implications of not passing props, including the use of default values.
+
+6. **Encouragement to Practice:** Throughout the lecture, Hitesh sir encourages viewers to create more components and experiment with using props.
+
+7. **Conclusion:** He summarizes the key takeaways: the fundamentals of Tailwind CSS configuration, the role of props in React, and the advantages of building modular components.
+
+- This lecture is designed to motivate learners to apply the concepts discussed in their own projects.
+
+### Lecture 193 - Building a react project bgChanger
