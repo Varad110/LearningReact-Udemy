@@ -336,3 +336,27 @@ After completing this lecture, learners understand:
 This lecture is an excellent beginner React project because it introduces core React concepts through a simple and interactive application. It helps learners understand how React works internally while building confidence through hands-on practice.
 
 The project also prepares learners for more advanced React topics and larger applications in future lectures.
+
+---
+
+### Lecture 194 - useEffect, useRef and useCallback with 1 project
+
+---
+
+- In this lecture, Hitesh introduces a project focused on building a password generator using React.js. Here are the main points covered:
+
+1. **Project Focus:** The lesson revolves around creating a password generator, highlighting good and bad practices in React development, mainly focusing on state management and performance optimization.
+
+2. **Password Features:** Users can set the length of the password using a slider and choose whether to include numbers and special characters.
+
+3. **State Management:** Hitesh explains how to set the initial state for the password length, character inclusion, and the generated password.
+
+4. **Hooks:**
+
+- useEffect: This hook is emphasized for executing code on component mount and when specific state values change, allowing dynamic password generation based on user input.
+- useCallback: Used to optimize performance by memoizing frequently called functions such as the password generation logic.
+- useRef: Introduced for managing references to DOM elements, enhancing user feedback capability, especially for copying generated passwords to the clipboard.
+
+5. **User Experience:** Hitesh stresses the importance of UX design and how small modifications can significantly affect the application’s functionality.
+
+- The lecture provides a thorough walkthrough of building a functional React project while also teaching essential concepts and best practices in React development.
