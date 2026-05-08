@@ -1,10 +1,12 @@
-# start of react js learning from Udemy
+# Start of react js learning from Udemy
 
 ## Date: 06/05/2026
 
-### lecture 186 - react course
+### Lecture 186 - react course
 
 - Start of the course and learn why react is used and the need of it
+
+---
 
 ### Lecture 187 - Create React Project
 
@@ -14,6 +16,8 @@
   - npm run start (CRA)
   - npm run dev (vite)
   - npm run build (in both project)
+
+---
 
 ### Lecture 188 - understand the react flow and structure
 
@@ -33,7 +37,9 @@
 
 - Overall, the lecture offers a comprehensive overview of React's structure, differences between CRA and Vite, and foundational principles of React applications.
 
-## date: 07/05/2026
+---
+
+## Date: 07/05/2026
 
 ### Lecture 189 - Create your own react library and JSX
 
@@ -48,6 +54,8 @@
 5. **Common Pitfalls:** He addresses issues like mistakenly including children as props and offers solutions.
 
 - This lecture provide the great understanding of how the **JSX** works and how react creates the elements
+
+---
 
 ### Lecture 190 - Why you need hooks and project
 
@@ -69,6 +77,8 @@
 
 - This lecture lays a strong foundation for understanding how to make dynamic and responsive applications in React
 
+---
+
 ### Lecture 191 - Virtual DOM, Fibre and reconciliation
 
 - In this lecture, Hitesh sir focuses on the theoretical aspects of React, highlighting several key concepts critical for building efficient applications:
@@ -84,6 +94,8 @@
 5. **Conclusion:** Hitesh sir wraps up the lecture by stressing the importance of understanding these foundational concepts, as they are crucial for tackling more advanced topics in React and related frameworks like Next.js. He encourages viewers to engage with the material and prepare for coding sessions ahead.
 
 - This lecture serves as a solid foundation for students aiming to understand the engineering side of React.
+
+---
 
 ### Lecture 192 - Tailwind and Props in reactjs
 
@@ -105,4 +117,222 @@
 
 - This lecture is designed to motivate learners to apply the concepts discussed in their own projects.
 
+---
+
+## Date 08/05/2026
+
 ### Lecture 193 - Building a react project bgChanger
+
+In this lecture, Hitesh highlights the importance of starting with small React projects to build confidence and understand the core workflow of React development. The project demonstrated is a simple **Background Color Changer** using **React** and **Tailwind CSS**.
+
+---
+
+#### Main Concepts Covered
+
+1. Importance of Small Projects
+
+Small beginner-friendly projects help learners:
+
+- Understand React fundamentals
+- Learn component structure
+- Practice state management
+- Gain confidence before advanced projects
+
+The goal is to focus on understanding concepts rather than building complex applications immediately.
+
+---
+
+#### Project Overview
+
+The project is a simple application where users can change the background color by clicking buttons.
+
+#### Features
+
+- Default background color: `olive`
+- Buttons for:
+  - Red
+  - Green
+  - Blue
+
+When a button is clicked, the background color changes dynamically.
+
+---
+
+#### React State Management with `useState`
+
+The lecture introduces the `useState` hook.
+
+#### Example
+
+```jsx
+const [color, setColor] = useState("olive");
+```
+
+#### Explanation
+
+| Part       | Meaning                  |
+| ---------- | ------------------------ |
+| `color`    | Current background color |
+| `setColor` | Function to update color |
+| `"olive"`  | Default initial value    |
+
+When the state changes, React automatically updates the UI.
+
+---
+
+#### Dynamic UI Rendering
+
+Buttons trigger color changes using event handlers.
+
+#### Example
+
+```jsx
+<button onClick={() => setColor("red")}>Red</button>
+```
+
+#### Workflow
+
+1. User clicks button
+2. `setColor("red")` executes
+3. State updates
+4. React re-renders component
+5. Background color changes
+
+---
+
+#### Dynamic Styling
+
+The background color is applied dynamically using inline styles.
+
+#### Example
+
+```jsx
+style={{ backgroundColor: color }}
+```
+
+The current value of `color` is automatically applied to the UI.
+
+---
+
+#### Tailwind CSS Styling
+
+The lecture demonstrates utility-based styling with Tailwind CSS.
+
+#### Example
+
+```jsx
+className = "w-full h-screen duration-200";
+```
+
+#### Meaning
+
+| Class          | Purpose                     |
+| -------------- | --------------------------- |
+| `w-full`       | Full width                  |
+| `h-screen`     | Full screen height          |
+| `duration-200` | Smooth transition animation |
+
+---
+
+#### Project Setup Process
+
+#### Step 1 — Create React App with Vite
+
+```bash
+npm create vite@latest
+```
+
+---
+
+#### Step 2 — Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+#### Step 3 — Configure Tailwind CSS
+
+- Install Tailwind
+- Setup configuration files
+- Add Tailwind directives
+
+---
+
+#### Step 4 — Clean Boilerplate Files
+
+Remove unnecessary starter code from the Vite template.
+
+---
+
+#### Step 5 — Build the UI
+
+Create:
+
+- Main container
+- Buttons
+- Event handlers
+- State logic
+
+---
+
+#### Key React Learning
+
+The most important concept taught:
+
+```text
+State Changes → React Re-renders UI Automatically
+```
+
+This is the foundation of React development.
+
+---
+
+#### Final Example Code
+
+```jsx
+import { useState } from "react";
+
+function App() {
+  const [color, setColor] = useState("olive");
+
+  return (
+    <div
+      className="w-full h-screen duration-200"
+      style={{ backgroundColor: color }}
+    >
+      <button onClick={() => setColor("red")}>Red</button>
+
+      <button onClick={() => setColor("green")}>Green</button>
+
+      <button onClick={() => setColor("blue")}>Blue</button>
+    </div>
+  );
+}
+
+export default App;
+```
+
+---
+
+#### Skills Learned from This Project
+
+After completing this lecture, learners understand:
+
+- React basics
+- JSX
+- `useState` hook
+- State management
+- Event handling
+- Dynamic UI updates
+- Tailwind CSS basics
+- Component structure
+
+---
+
+#### Conclusion
+
+This lecture is an excellent beginner React project because it introduces core React concepts through a simple and interactive application. It helps learners understand how React works internally while building confidence through hands-on practice.
+
+The project also prepares learners for more advanced React topics and larger applications in future lectures.
