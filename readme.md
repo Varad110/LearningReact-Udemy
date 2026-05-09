@@ -360,3 +360,247 @@ The project also prepares learners for more advanced React topics and larger app
 5. **User Experience:** Hitesh stresses the importance of UX design and how small modifications can significantly affect the application’s functionality.
 
 - The lecture provides a thorough walkthrough of building a functional React project while also teaching essential concepts and best practices in React development.
+
+---
+
+## Date 09/05/2026
+
+---
+
+### Lecture 195 - Custom hooks in react | Currency Project
+
+#### Introduction
+
+This lecture focuses on building a **Currency Converter Application** using React.  
+The project helps in understanding:
+
+- Custom Hooks
+- Reusable Components
+- API Integration
+- State Management
+- Form Handling
+- Tailwind CSS Styling
+
+The lecture emphasizes writing clean, scalable, and maintainable React code.
+
+---
+
+#### Key Topics Covered
+
+1. Custom Hooks
+
+One of the main concepts introduced is **Custom Hooks**.
+
+A custom hook called `useCurrencyInfo` is created to:
+
+- Fetch currency conversion data
+- Reuse logic across components
+- Keep components clean and organized
+
+Example:
+
+```javascript
+function useCurrencyInfo(currency) {
+  // Fetch currency data here
+}
+```
+
+#### Benefits of Custom Hooks
+
+- Separation of concerns
+- Cleaner component structure
+- Reusable business logic
+- Better code maintainability
+
+---
+
+2. Component Reusability
+
+The lecture highlights the importance of building reusable components.
+
+An input component is designed that can:
+
+- Accept props dynamically
+- Work for multiple currencies
+- Handle different input states
+
+Example:
+
+```jsx
+<InputBox label="From" amount={amount} currencyOptions={options} />
+```
+
+#### Advantages
+
+- Reduces repeated code
+- Easier maintenance
+- Improves scalability
+- Better project organization
+
+---
+
+3. API Integration
+
+The application fetches live currency conversion rates using an API.
+
+The lecture explains:
+
+- Making API requests
+- Fetching JSON data
+- Dynamically updating currency values
+
+Example API structure:
+
+```javascript
+https://api.exchangerate-api.com/v4/latest/USD
+```
+
+#### Important Concepts
+
+- Async data fetching
+- Handling API responses
+- Updating UI with fetched data
+
+---
+
+4. State Management
+
+React Hooks are used extensively for managing state.
+
+#### useState
+
+Used for:
+
+- Currency amount
+- Selected currencies
+- Converted values
+
+Example:
+
+```javascript
+const [amount, setAmount] = useState(0);
+```
+
+---
+
+#### useEffect
+
+Used for:
+
+- Fetching API data
+- Updating conversion rates when currency changes
+
+Example:
+
+```javascript
+useEffect(() => {
+  // Fetch currency data
+}, [currency]);
+```
+
+---
+
+5. Form Handling
+
+The lecture demonstrates how to manage forms properly in React.
+
+Topics include:
+
+- Handling form submission
+- Preventing page reloads
+- Triggering conversion logic
+
+Example:
+
+```javascript
+const handleSubmit = (e) => {
+  e.preventDefault();
+};
+```
+
+#### Concepts Covered
+
+- Event handling
+- Controlled components
+- User interaction management
+
+---
+
+6. Styling with Tailwind CSS
+
+Tailwind CSS is used for:
+
+- Quick styling
+- Responsive layouts
+- Better UI appearance
+
+Although functionality is the main focus, the lecture briefly explains:
+
+- Utility classes
+- Layout styling
+- Responsive design basics
+
+Example:
+
+```html
+className="bg-white p-4 rounded-lg shadow-md"
+```
+
+---
+
+7. Best Practices
+
+Throughout the lecture, several coding best practices are emphasized:
+
+#### Clean Code
+
+- Proper formatting
+- Organized file structure
+- Readable code
+
+#### Naming Conventions
+
+- Descriptive variable names
+- Meaningful function names
+
+#### Accessibility
+
+- Proper labels
+- User-friendly inputs
+- Better usability
+
+#### Reusability
+
+- Modular components
+- Avoiding duplicate logic
+
+---
+
+#### Final Outcome
+
+By the end of the lecture, you build a fully functional:
+
+✅ Currency Converter Application
+
+With features like:
+
+- Live currency conversion
+- Dynamic API data fetching
+- Reusable input components
+- Responsive UI
+- React Hooks implementation
+
+---
+
+#### Conclusion
+
+This project serves as an excellent practical example for learning:
+
+- React Hooks
+- Custom Hooks
+- API Integration
+- Reusable Components
+- State Management
+- Tailwind CSS
+
+It strengthens core React concepts while teaching real-world project structure and best development practices.# React Currency Converter Project.
