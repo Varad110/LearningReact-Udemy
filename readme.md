@@ -604,3 +604,484 @@ This project serves as an excellent practical example for learning:
 - Tailwind CSS
 
 It strengthens core React concepts while teaching real-world project structure and best development practices.# React Currency Converter Project.
+
+---
+
+### Lecture 196 - React router crash course
+
+#### Introduction
+
+This lecture provides a complete introduction to **React Router**, the standard routing library used in React applications. The instructor explains how routing works in **Single Page Applications (SPAs)** and demonstrates how to build navigation systems similar to traditional multi-page websites without refreshing the browser.
+
+The lecture focuses on:
+
+- setting up React Router,
+- creating routes,
+- dynamic routing,
+- navigation,
+- loading data,
+- and handling errors/pages not found.
+
+---
+
+1. What is a Single Page Application (SPA)?
+
+A **Single Page Application** loads a single HTML page and dynamically updates content without reloading the entire website.
+
+#### Traditional Website Flow
+
+```text
+User clicks link
+    ↓
+Browser requests new HTML page
+    ↓
+Full page reload
+```
+
+---
+
+#### SPA Flow
+
+```text
+User clicks link
+    ↓
+React changes component
+    ↓
+Only required content updates
+```
+
+#### Benefits of SPAs
+
+- Faster navigation
+- Better user experience
+- No full-page refresh
+- Smooth transitions
+- Better performance
+
+---
+
+2. Introduction to React Router
+
+React Router is the official library used to implement routing in React applications.
+
+It allows developers to:
+
+- create multiple pages,
+- manage URLs,
+- navigate between components,
+- and build SPA-like experiences.
+
+---
+
+3. Installing React Router
+
+The lecture likely installs React Router using:
+
+```bash
+npm install react-router-dom
+```
+
+This package provides:
+
+- routing components,
+- navigation tools,
+- hooks,
+- and route management utilities.
+
+---
+
+4. Setting Up Router
+
+The instructor explains how to create the router configuration.
+
+Example:
+
+```jsx
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+```
+
+---
+
+#### Creating Routes
+
+```jsx
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+]);
+```
+
+---
+
+#### Providing Router to Application
+
+```jsx
+<RouterProvider router={router} />
+```
+
+This connects routing to the React app.
+
+---
+
+5. Understanding Routes
+
+A route maps:
+
+- a URL path
+- to a React component
+
+Example:
+
+| URL        | Component |
+| ---------- | --------- |
+| `/`        | Home      |
+| `/about`   | About     |
+| `/contact` | Contact   |
+
+---
+
+6. Layouts and Nested Routing
+
+The lecture emphasizes maintaining a consistent UI structure.
+
+Example:
+
+- Navbar
+- Footer
+- Sidebar
+
+These remain constant while page content changes.
+
+---
+
+#### Example Structure
+
+```jsx
+<AppLayout>
+  <Navbar />
+  <Outlet />
+  <Footer />
+</AppLayout>
+```
+
+`Outlet` renders child routes dynamically.
+
+---
+
+7. Dynamic Routing
+
+Dynamic routes allow values to be passed through the URL.
+
+Example:
+
+```text
+/user/101
+/user/202
+/user/303
+```
+
+---
+
+#### Defining Dynamic Route
+
+```jsx
+{
+   path: "/user/:id",
+   element: <User />
+}
+```
+
+Here `:id` is a route parameter.
+
+---
+
+8. useParams Hook
+
+React Router provides the `useParams()` hook to extract route parameters.
+
+Example:
+
+```jsx
+import { useParams } from "react-router-dom";
+
+function User() {
+  const { id } = useParams();
+
+  return <h1>User ID: {id}</h1>;
+}
+```
+
+---
+
+9. Navigation in React Router
+
+The lecture explains why normal anchor tags should not be used in SPAs.
+
+---
+
+#### Problem with `<a>` Tags
+
+```html
+<a href="/about">About</a>
+```
+
+This causes:
+
+- full-page reload,
+- loss of SPA behavior,
+- slower experience.
+
+---
+
+10. Using Link Component
+
+React Router provides `Link`.
+
+Example:
+
+```jsx
+<Link to="/about">About</Link>
+```
+
+Benefits:
+
+- No page refresh
+- Faster navigation
+- Maintains SPA behavior
+
+---
+
+11. NavLink Component
+
+`NavLink` is similar to `Link` but provides active styling.
+
+Example:
+
+```jsx
+<NavLink to="/about">About</NavLink>
+```
+
+Useful for:
+
+- navigation menus,
+- highlighting current page.
+
+---
+
+12. Handling 404 Pages
+
+The lecture explains how to handle invalid URLs.
+
+Example:
+
+```jsx
+{
+   path: "*",
+   element: <NotFound />
+}
+```
+
+This catches undefined routes.
+
+---
+
+13. Data Loading with Loaders
+
+React Router supports loading data before rendering a component.
+
+---
+
+#### Example Loader
+
+```jsx
+{
+   path: "/github",
+   element: <Github />,
+   loader: githubLoader
+}
+```
+
+---
+
+#### Accessing Loaded Data
+
+```jsx
+const data = useLoaderData();
+```
+
+Benefits:
+
+- faster rendering,
+- cleaner code,
+- preloaded API data.
+
+---
+
+14. Fetching API Data
+
+The lecture demonstrates API calls inside React components.
+
+Example:
+
+```jsx
+useEffect(() => {
+  fetch(API_URL)
+    .then((res) => res.json())
+    .then((data) => setData(data));
+}, []);
+```
+
+This is used to:
+
+- fetch backend data,
+- display dynamic content,
+- connect frontend with APIs.
+
+---
+
+15. Best Practices Mentioned
+
+#### Use Layout Components
+
+Keep:
+
+- navbar,
+- footer,
+- sidebar,
+  consistent across pages.
+
+---
+
+#### Organize Routes Properly
+
+Example:
+
+```text
+src/
+ ├── pages/
+ ├── components/
+ ├── routes/
+ └── layouts/
+```
+
+---
+
+#### Use Dynamic Routing Smartly
+
+Useful for:
+
+- user profiles,
+- product pages,
+- blog posts,
+- dashboards.
+
+---
+
+16. Main Hooks Covered
+
+| Hook              | Purpose                     |
+| ----------------- | --------------------------- |
+| `useParams()`     | Get URL parameters          |
+| `useLoaderData()` | Access preloaded route data |
+| `useNavigate()`   | Navigate programmatically   |
+
+---
+
+17. Important Interview Questions
+
+---
+
+#### Q1. What is React Router?
+
+React Router is a library for handling routing in React applications.
+
+---
+
+#### Q2. Why use React Router?
+
+To create SPA navigation without refreshing the page.
+
+---
+
+##### Q3. Difference between Link and Anchor Tag?
+
+| Anchor Tag             | Link           |
+| ---------------------- | -------------- |
+| Reloads page           | No reload      |
+| Traditional navigation | SPA navigation |
+| Slower                 | Faster         |
+
+---
+
+#### Q4. What is Dynamic Routing?
+
+Routing where URL parameters change dynamically.
+
+Example:
+
+```text
+/product/1
+/product/2
+```
+
+---
+
+#### Q5. What does useParams do?
+
+Extracts parameters from the URL.
+
+---
+
+#### Q6. What is Outlet?
+
+A placeholder used for rendering nested routes.
+
+---
+
+18. Overall Lecture Flow
+
+```text
+React App
+   ↓
+React Router
+   ↓
+Routes Defined
+   ↓
+Navigation
+   ↓
+Dynamic Routing
+   ↓
+Data Loading
+   ↓
+SPA Experience
+```
+
+---
+
+#### Final Takeaway
+
+This lecture teaches the complete foundation of routing in React applications.
+
+By the end of the lecture, you understand:
+
+- how SPAs work,
+- how routing is managed,
+- how navigation works,
+- dynamic URLs,
+- data loading,
+- and route structuring.
+
+These concepts are essential for building modern React applications such as:
+
+- dashboards,
+- e-commerce websites,
+- admin panels,
+- portfolio sites,
+- social media apps,
+- and SaaS platforms.
